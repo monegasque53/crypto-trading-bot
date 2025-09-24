@@ -29,4 +29,6 @@ Logs disponibles dans l'interface Railway.
 - Docker
 - scikit-learn
 - ccxt (Binance)
+
 - pandas-ta
+- 
