@@ -1,0 +1,9 @@
+{
+  "build": {
+    "builder": "dockerfile"
+  },
+  "deploy": {
+    "startCommand": "python tendance_globale.py",
+    "restartPolicyType": "always"
+  }
+}
