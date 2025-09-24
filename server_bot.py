@@ -14,7 +14,7 @@ os.environ['SOUND_ALERTS'] = 'false'
 sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 
 try:
-    from tendance_globale import TendanceGlobalMonitor
+    import tendance_globale
     import logging
     from datetime import datetime
     
@@ -38,12 +38,9 @@ try:
         print("🔇 Mode serveur: alertes sonores désactivées")
         
         try:
-            # Création du monitor avec configuration serveur
-            monitor = TendanceGlobalMonitor()
-            
-            # Démarrage en monitoring continu
+            # Lancement direct du script principal
             print("▶️ Lancement du monitoring continu...")
-            monitor.start_monitoring()
+            tendance_globale.main()
             
         except KeyboardInterrupt:
             print("\n🛑 Arrêt demandé par l'utilisateur")
