@@ -1,6 +1,5 @@
 # Dockerfile pour conteneurisation
-FROM python:3.11-slim
-
+FROM python:3.11
 # Installation des dépendances système
 RUN apt-get update && apt-get install -y \
     gcc \
@@ -32,4 +31,5 @@ ENV SOUND_ALERTS=false
 EXPOSE 8080
 
 # Commande de démarrage
+
 CMD ["python", "tendance_globale.py"]
